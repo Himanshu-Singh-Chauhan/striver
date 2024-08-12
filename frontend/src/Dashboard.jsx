@@ -50,7 +50,8 @@ function Dashboard() {
       titleValue,
       descriptionValue,
       linkTextValue,
-      linkValue
+      linkValue,
+      date.startDate
     );
 
     const formData = {
@@ -59,6 +60,7 @@ function Dashboard() {
       link_text: linkTextValue,
       link: linkValue,
       is_active: isEnabledValue,
+      event_date: date.startDate,
     };
 
     try {
