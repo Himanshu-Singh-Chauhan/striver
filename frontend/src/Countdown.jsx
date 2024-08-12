@@ -5,7 +5,7 @@ Countdown.propTypes = {
   targetDate: PropTypes.string.isRequired,
 };
 
-export default function Countdown({ targetDate}) {
+export default function Countdown({ targetDate }) {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
@@ -43,7 +43,6 @@ export default function Countdown({ targetDate}) {
     </div>
   );
 }
-
 
 CountdownItem.propTypes = {
   value: PropTypes.number.isRequired,
