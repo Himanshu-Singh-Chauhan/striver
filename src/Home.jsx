@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Banner from "./Banner";
 import { useBanner } from "./useBanner";
+import { ErrorAlert } from "./Dashboard";
+
 
 // Convert the date to the required format
 const formatDate = (dateString) => {
@@ -17,6 +19,8 @@ function Home() {
   // const linkText = "Register now";
   // const link = "https://takeuforward.org/about-us";
 
+  const info = "NOTE - Sometimes Supabase pauses or shutdowns the database if there is no activity for a while. So, if you are not seeing the data, you can ping me on my contacts in my resume to resume the supabase service.";   
+
   return (
     <>
       <Link to="/dashboard">
@@ -31,7 +35,10 @@ function Home() {
         link={link}
         targetDate={targetDate}
       ></Banner>
+      
+      <div className="my-10"></div>
 
+      <ErrorAlert error={info} />
       {/* add details here */}
     </>
   );

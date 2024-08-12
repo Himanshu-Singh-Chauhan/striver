@@ -252,7 +252,7 @@ ErrorAlert.propTypes = {
   error: PropTypes.string,
 };
 
-function ErrorAlert({ error }) {
+export function ErrorAlert({ error }) {
   return (
     <div
       id="alert-3"
