@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from "react";
+import "./App.css";
+import Banner from "./Banner";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const title = "TUF compitetion 2024";
+  const description = 'This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next.';
+  const linkText = "Register now";
+  const link = "https://takeuforward.org/about-us";
 
   return (
     <>
-      <div>
+      <Banner
+        title={title}
+        description={description}
+        linkText={linkText}
+        link={link}
+      ></Banner>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,9 +35,9 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
