@@ -4,9 +4,10 @@ import { createClient } from "@supabase/supabase-js";
 const SUPABASE_URL = "https://qalyefmhqlurvjwjoekg.supabase.co";
 const SUPABASE_ANON_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbHllZm1ocWx1cnZqd2pvZWtnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjM0NzExNzIsImV4cCI6MjAzOTA0NzE3Mn0.4owlTRsqJaXeOilUv5EGkH2WsjUHPUR__g8xPE7aCbk";
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// export { supabase };
 
 export function useBanner() {
-  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   const [bannerData, setBannerData] = useState({
     isEnabled: false,
     title: "",
