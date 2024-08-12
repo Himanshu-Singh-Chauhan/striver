@@ -2,8 +2,16 @@ import { Link } from "react-router-dom";
 import Banner from "./Banner";
 import { useBanner } from "./useBanner";
 
+// Convert the date to the required format
+const formatDate = (dateString) => {
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  return date.toISOString().slice(0, 19); // This will give you "YYYY-MM-DDTHH:mm:ss"
+};
+
 function Home() {
-  const { title, description, linkText, link, targetDate } = useBanner();
+  const { title, description, linkText, link, eventDate } = useBanner();
+  const targetDate = formatDate(eventDate);
   // const title = "TUF compitetion 2024";
   // const description = 'This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next.';
   // const linkText = "Register now";

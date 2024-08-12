@@ -7,15 +7,6 @@ const SUPABASE_ANON_KEY =
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // export { supabase };
 
-
-// Convert the date to the required format
-const formatDate = (dateString) => {
-  if (!dateString) return "";
-  const date = new Date(dateString);
-  return date.toISOString().slice(0, 19); // This will give you "YYYY-MM-DDTHH:mm:ss"
-};
-
-
 export function useBanner() {
   const [bannerData, setBannerData] = useState({
     isEnabled: false,
@@ -39,8 +30,8 @@ export function useBanner() {
 
     if (data && data.length > 0) {
       const { title, description, link_text, link, is_active, event_date } = data[0];
-      const targetDate = formatDate(event_date);
-      console.log("targetDate", targetDate);
+      // const targetDate = formatDate(event_date);
+      // console.log("targetDate", targetDate);
       console.log(event_date)
       setBannerData({
         isEnabled: is_active,
@@ -48,7 +39,7 @@ export function useBanner() {
         description,
         linkText: link_text,
         link,
-        targetDate,
+        eventDate: event_date,
       });
     }
   }
