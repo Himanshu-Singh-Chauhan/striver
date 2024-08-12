@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import { useBanner } from "./useBanner";
 
 function Home() {
-  const { title, description, linkText, link } = useBanner();
+  const { title, description, linkText, link, targetDate } = useBanner();
   // const title = "TUF compitetion 2024";
   // const description = 'This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next. This is long description Join us in Denver from June 7 – 9 to see what’s coming next.';
   // const linkText = "Register now";
@@ -21,7 +21,10 @@ function Home() {
         description={description}
         linkText={linkText}
         link={link}
+        targetDate={targetDate}
       ></Banner>
+
+      {/* add details here */}
     </>
   );
 }

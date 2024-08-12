@@ -7,11 +7,12 @@ Banner.propTypes = {
   description: PropTypes.string.isRequired,
   linkText: PropTypes.string,
   link: PropTypes.string.isRequired,
+  targetDate: PropTypes.string.isRequired,
 };
 
-export default function Banner({ title, description, linkText, link }) {
+export default function Banner({ title, description, linkText, link, targetDate }) {
   // Example future date (adjust as needed)
-  const targetDate = "2024-08-31T23:59:59";
+  // const targetDate = "2024-08-31T23:59:59";
 
   return (
     <div className="relative isolate flex items-center gap-x-6 rounded-lg overflow-hidden bg-gray-50 px-6 pt-7 pb-5 sm:px-3.5 sm:before:flex-1">
